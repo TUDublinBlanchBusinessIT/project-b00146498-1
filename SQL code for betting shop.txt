@@ -1,0 +1,14 @@
+CREATE TABLE horses (
+	id INT AUTO_INCREMENT,
+	HorseName VARCHAR(40),
+	Time INT,
+	Date DATE,
+	Place VARCHAR(40),
+	Stake INT,
+	PRIMARY KEY(id)
+);
+INSERT INTO horses (HorseName, Time, Date, place, stake)
+VALUES ('Rudolf', 1400, '12/12/2023', 'Munich', 7);
+
+SELECT * FROM horses;
+
