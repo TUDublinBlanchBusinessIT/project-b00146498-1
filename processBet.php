@@ -8,7 +8,7 @@ $date = $_POST['date'];
 $stake = $_POST['stake'];
 $odds = $_POST['odds'];
 
-$potentialWinnings = $stake * ($odds + 1);
+$potentialWinnings = ($stake * $odds) + $stake;
 
 $sql = "INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('$horsename', '$place', '$time', '$date', '$stake', '$odds')";
 
