@@ -3,7 +3,17 @@
         <form method="POST" action="processBet.php">
             <h1>Horse Bets</h1>
                 Enter your Horse's name: <input type="text" name="hn"><br>
-                Enter the Place: <input type="text" name="place"><br>
+                Select the Racecourse: 
+                <select name="place">
+                    <option value="Navan">Navan</option>
+                    <option value="Curragh">Curragh</option>
+                    <option value="Fairyhouse">Fairyhouse</option>
+                    <option value="Punchestown">Punchestown</option>
+                    <option value="Naas">Naas</option>
+                    <option value="Cork">Cork</option>
+                    <option value="Leopardstown">Leopardstown</option>
+                    <option value="Tramore">Tramore</option>
+                </select><br>
                 Enter the Time: <input type="time" name="time"><br>
                 Enter the Date of Race: <input type="date" name="date"><br>
                 Enter your Stake: <input type="number" step="0.01" name="stake"><br>
