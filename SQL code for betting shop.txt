@@ -1,14 +1,17 @@
-CREATE TABLE horses (
-	id INT AUTO_INCREMENT,
-	HorseName VARCHAR(40),
-	Time INT,
-	Date DATE,
-	Place VARCHAR(40),
-	Stake INT,
-	PRIMARY KEY(id)
+CREATE DATABASE IF NOT EXISTS bettingshop;
+USE bettingshop;
+DROP TABLE IF EXISTS horsebet;
+CREATE TABLE horsebet (
+    id INTEGER AUTO_INCREMENT,
+    horsename VARCHAR(30),
+    place VARCHAR(30),
+    time TIME,
+    dateofrace DATE,
+    stake INT,
+    PRIMARY KEY (id)
 );
-INSERT INTO horses (HorseName, Time, Date, place, stake)
-VALUES ('Rudolf', 1400, '12/12/2023', 'Munich', 7);
 
-SELECT * FROM horses;
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake)
+VALUES ('Ross', 'Navan', '15:00:00', '2023-10-01', 6);
 
+SELECT * FROM horsebet;
