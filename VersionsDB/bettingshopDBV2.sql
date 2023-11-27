@@ -23,3 +23,6 @@ SELECT * FROM dogbet;
 
 ALTER TABLE dogbet
 MODIFY COLUMN trapno VARCHAR(10);
+
+ALTER TABLE horsebet
+ADD COLUMN odds DECIMAL(10,2);
