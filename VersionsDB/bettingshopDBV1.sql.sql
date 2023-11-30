@@ -11,8 +11,7 @@ CREATE TABLE horsebet (
     PRIMARY KEY (id)
 );
 
-INSERT INTO horsebet (horsename, place, time, dateofrace, stake)
-VALUES ('Ross', 'Navan', '15:00:00', '2023-10-01', 6);
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake) VALUES ('Ross', 'Navan', '15:00:00', '2023-10-01', 6);
 
 SELECT * FROM horsebet;
 

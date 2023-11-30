@@ -13,8 +13,9 @@ while($row=mysqli_fetch_assoc($result)) {
     $time = $row['time'];
     $dob = $row['dateofrace'];
     $stake = $row['stake'];
+    $odds = $row['odds'];
 
-    echo "<TR><TD>$hn</TD><TD>$place</TD><TD>$time</TD><TD>$dob</TD><TD>$stake</TD></TR>";
+    echo "<TR><TD>$hn</TD><TD>$place</TD><TD>$time</TD><TD>$dob</TD><TD>$stake</TD><TD>$odds</TD></TR>";
 }
 echo "</TABLE>";
 
