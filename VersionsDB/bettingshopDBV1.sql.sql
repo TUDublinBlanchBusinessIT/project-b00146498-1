@@ -8,10 +8,11 @@ CREATE TABLE horsebet (
     time TIME,
     dateofrace DATE,
     stake INT,
+    odds DECIMAL(10,2);
     PRIMARY KEY (id)
 );
 
-INSERT INTO horsebet (horsename, place, time, dateofrace, stake) VALUES ('Ross', 'Navan', '15:00:00', '2023-10-01', 6);
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('Ross', 'Navan', '15:00:00', '2023-10-01', 6, 5.2);
 
 SELECT * FROM horsebet;
 

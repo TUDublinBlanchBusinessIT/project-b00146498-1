@@ -1,19 +1,10 @@
 <html>
     <head>
-      <title>Customer</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <form method="POST" action="processCustomer.php">
-                <h1>Customer Information</h1>
-                Enter your Customer's firstname: <input type="text" class="form-control form-control-lg" placeholder="Customer Firstname" name="fn"/><br>
-                Enter your Customer's surname: <input type="text" class="form-control form-control-lg" placeholder="Customer Surname" name="sn"/><br>
-                <input type="submit" class="form-control form-control-lg">
-            </form>
-        </div>
+        <form method="POST" action="processCustomer.php">
+            <h1>Customer</h1>
+                Enter your Customer's firstname: <input type="text" name="fn"><br>
+                Enter your Customer's surname: <input type="text" name="sn"><br>
+                <input type="submit">
+        </form>
     </body>
 </html>
