@@ -17,11 +17,12 @@ CREATE TABLE horsebet (
     place VARCHAR(30),
     time TIME,
     dateofrace DATE,
-    stake INT,
+    stake money,
+    odds dec(10,2),
     customerid int,
     PRIMARY KEY (id),
     foreign key(customerid) references customer(id)
     
 );
-INSERT INTO horsebet (horsename, place, time, dateofrace, stake, customerid) VALUES ('Ross', 'Navan', '15:00:00', '2023-10-01', 6, 50);
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds, customerid) VALUES ('Ross', 'Navan', '15:00:00', '2023-10-01', 6, 3.2, 50);
 SELECT * FROM horsebet
