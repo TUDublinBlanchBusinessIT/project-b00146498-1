@@ -50,19 +50,7 @@ $result = mysqli_query($conn, $sql);
                 </tr>
             </thead>
             <tbody>
-                <?php
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>";
-                    echo "<td>{$row['id']}</td>";
-                    echo "<td>{$row['dogname']}</td>";
-                    echo "<td>{$row['trapno']}</td>";
-                    echo "<td>{$row['place']}</td>";
-                    echo "<td>{$row['time']}</td>";
-                    echo "<td>{$row['dateofrace']}</td>";
-                    echo "<td>{$row['stake']}</td>";
-                    echo "</tr>";
-                }
-                ?>
+                <?php include("dogbetList.php");?>
             </tbody>
         </table>
     </div>
@@ -70,5 +58,4 @@ $result = mysqli_query($conn, $sql);
 </html>
 
 <?php
-mysqli_close($conn);
 ?>
