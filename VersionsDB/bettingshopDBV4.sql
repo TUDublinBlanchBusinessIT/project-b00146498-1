@@ -8,7 +8,7 @@ CREATE TABLE dogbet (
     place VARCHAR(30),
     time TIME,
     dateofrace DATE,
-    stake DECIMAL(10,2),
+    stake DECIMAL(12,2),
     PRIMARY KEY (id)
 );
 
@@ -43,15 +43,12 @@ CREATE TABLE horsebet (
     place VARCHAR(30),
     time TIME,
     dateofrace DATE,
-    stake DECIMAL(10,2),
+    stake DECIMAL(12,2),
     odds DECIMAL(10,2),
-    customerid int,
     PRIMARY KEY (id),
-    FOREIGN KEY (customerid) REFERENCES customer(id),
-    FOREIGN KEY (dogbet_id) REFERENCES dogbet(id)
 );
 
-INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds, customerid) VALUES ('King', 'Navan', '17:20:00', '2023-12-12', 27, 3.2, 3);
-INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds, customerid) VALUES ('Bugs Bunny', 'Curragh', '12:30:00', '2023-01-01', 85.3, 10.3, 1);
-INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds, customerid) VALUES ('Ross', 'Fairyhouse', '22:00:00', '2023-10-16', 0.20, 11.20, 5);
-INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds, customerid) VALUES ('Winnie the Pooh', 'Naas', '15:15:00', '2023-01-20', 155.20, 6.3, 2);
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('King', 'Navan', '17:20:00', '2023-12-12', 27, 3.2);
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('Bugs Bunny', 'Curragh', '12:30:00', '2023-01-01', 85.3, 10.3);
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('Ross', 'Fairyhouse', '22:00:00', '2023-10-16', 0.20, 11.20);
+INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('Winnie the Pooh', 'Naas', '15:15:00', '2023-01-20', 155.20, 6.3);

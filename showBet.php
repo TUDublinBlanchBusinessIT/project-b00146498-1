@@ -53,6 +53,24 @@ $result = mysqli_query($conn, $sql);
                 <?php include("dogbetList.php");?>
             </tbody>
         </table>
+
+        <h2>Horse Bets</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Horse Name</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Date of Race</th>
+                    <th>Stake</th>
+                    <th>Odds</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php include("horsebetList.php");?>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
