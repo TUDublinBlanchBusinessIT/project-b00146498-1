@@ -16,5 +16,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr><td>$id</td><td>$dogName</td><td>$trapNo</td><td>$place</td><td>$time</td><td>$dateOfRace</td><td>$stake</td></tr>";
 }
 
+echo "</tbody></table>";
+
 mysqli_close($conn);
 ?>
