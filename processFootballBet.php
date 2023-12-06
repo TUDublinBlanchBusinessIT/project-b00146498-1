@@ -1,11 +1,17 @@
 <?php
 include("dbcon.php");
 
-$ft = $_POST['ft'];
+$ft = $_POST['team'];
 $score = $_POST['score'];
-$time = $_POST['time'];
 $date = $_POST['date'];
+$stake = $_POST['stake'];
 
-INSERT INTO footballbet (footballteam, score, time, date) VALUES ('Arsenal', '3', '17:20:00', '2023-12-12');
+$sql = "INSERT INTO footballbet (footballteam, score, date, stake) VALUES ('$ft', '$score', '$date', '$stake')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "A new record added successfully";
+} else {
+    echo "Error: " . mysqli_error($conn);
+}
 
 ?>

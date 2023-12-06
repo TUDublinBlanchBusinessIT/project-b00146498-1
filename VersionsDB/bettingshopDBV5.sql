@@ -25,6 +25,7 @@ INSERT INTO dogbet (dogname, trapno, place, time, dateofrace, stake) VALUES ('Lo
 
 
 DROP TABLE IF EXISTS horsebet;
+
 CREATE TABLE horsebet (
     id INTEGER AUTO_INCREMENT,
     horsename VARCHAR(30),
@@ -33,9 +34,8 @@ CREATE TABLE horsebet (
     dateofrace DATE,
     stake DECIMAL(12,2),
     odds DECIMAL(10,2),
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 );
-
 INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('King', 'Navan', '17:20:00', '2023-12-12', 27, 3.2);
 INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('Bugs Bunny', 'Curragh', '12:30:00', '2023-01-01', 85.3, 10.3);
 INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('Ross', 'Fairyhouse', '22:00:00', '2023-10-16', 0.20, 11.20);
@@ -48,9 +48,9 @@ CREATE TABLE footballbet (
     id INTEGER AUTO_INCREMENT,
     footballteam VARCHAR(30),
     score INT,
-    time TIME,
     date DATE,
+    stake DECIMAL(12,2),
     PRIMARY KEY (id)
 );
 
-INSERT INTO footballbet (footballteam, score, time, date) VALUES ('Arsenal', '3', '17:20:00', '2023-12-12');
+INSERT INTO footballbet (footballteam, score, date, stake) VALUES ('Arsenal', '3', '2023-12-12', 16);
