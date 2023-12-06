@@ -12,10 +12,14 @@ $potentialWinnings = ($stake * $odds) + $stake;
 
 $sql = "INSERT INTO horsebet (horsename, place, time, dateofrace, stake, odds) VALUES ('$horsename', '$place', '$time', '$date', '$stake', '$odds')";
 
-if (mysqli_query($conn, $sql)) {
-    echo "A new record added successfully. Potential Winnings: $potentialWinnings";
-} else {
-    echo "Error: " . mysqli_error($conn);
+session_start();
+if (isset($_POST['showbet'])) {
+    $_SESSION['showbet'] = 'on';
+    header("Location: processDogBet.html");
+}
+else {
+    $_SESSION['showbet'] = 'off';
+    header("Location: showBet.php");
 }
 
 mysqli_close($conn);
