@@ -7,6 +7,10 @@ $result = mysqli_query($conn, $sql);
 $sql = "SELECT * FROM horsebet";
 $result = mysqli_query($conn, $sql);
 
+$sql = "SELECT * FROM footballbet";
+$result = mysqli_query($conn, $sql);
+
+
 
 ?>
 
@@ -52,6 +56,22 @@ $result = mysqli_query($conn, $sql);
                 </thead>
                 <tbody>
                     <?php include("horsebetList.php");?>
+                </tbody>
+            </table>
+
+            <h2>Football Bets</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Football Team</th>
+                        <th>Score</th>
+                        <th>Date</th>
+                        <th>Stake</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php include("footballList.php");?>
                 </tbody>
             </table>
         </div>

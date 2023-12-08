@@ -19,6 +19,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr><td>$id</td><td>$horsename</td><td>$place</td><td>$time</td><td>$dateofrace</td><td>$stake</td><td>$odds</td></tr>";
 }
 
-echo "</tbody></table>";
+
 
 ?>

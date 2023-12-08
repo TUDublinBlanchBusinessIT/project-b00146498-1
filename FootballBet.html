@@ -48,17 +48,18 @@
             <div class="container">
                 <form method="POST" action="processFootballBet.php">
                     <h1>Football Bets</h1>
-                        Select the match: <select class="form-control form-control-lg" placeholder="team" name="team">
+                    Select the match: 
+                        <select class="form-control form-control-lg" placeholder="team" name="footballteam">
                             <option value="Everton vs Arsenal">Everton vs Arsenal</option>
                             <option value="Barcelona vs Ireland">Barcelona vs Ireland</option>
                             <option value="Aston Villa vs Chelsea">Aston Villa vs Chelsea</option>
                             <option value="Newcastle United vs Nottingham Forest">Newcastle United vs Nottingham Forest</option>
                             <option value="Tottenham Hotspur vs West Ham United">Tottenham Hotspur vs West Ham United</option>
                         </select><br>
-                        Enter your predicted score: <input type="range" min="0" max="10" value="5" class="slider" id="myRange" name="score">
+                    Enter your predicted score: <input type="range" min="0" max="10" value="5" class="slider" id="myRange" name="score">
                         <p>Value: <span id="score">5</span></p><br>
-                        Enter the Date of Match: <input type="date" class="form-control form-control-lg" placeholder="Date" name="date"><br>
-                        Enter your Stake: <input type="number" step="0.01" class="form-control form-control-lg" placeholder="Stake" name="stake"><br>
+                    Enter the Date of Match: <input type="date" class="form-control form-control-lg" placeholder="Date" name="date"><br>
+                    Enter your Stake: <input type="number" step="0.01" class="form-control form-control-lg" placeholder="Stake" name="stake"><br>
                         <input type="submit" class="form-control form-control-lg">
                 </form>
             </div>
