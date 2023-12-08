@@ -13,5 +13,17 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error: " . mysqli_error($conn);
 }
+mysqli_close($conn);
 
+session_start();
+
+if (isset($_POST['showbet'])) {
+    $_SESSION['showbet'] = 'on';
+    header("Location: processBet.html");
+} else {
+    $_SESSION['showbet'] = 'off';
+    header("Location: showBet.php");
+}
+
+session_destroy();
 ?>

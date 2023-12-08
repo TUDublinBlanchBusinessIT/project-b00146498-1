@@ -23,7 +23,7 @@ session_start();
 
 if (isset($_POST['showbet'])) {
     $_SESSION['showbet'] = 'on';
-    header("Location: processBet.html");
+    header("Location: FootballBet.html");
 } else {
     $_SESSION['showbet'] = 'off';
     header("Location: showBet.php");
